@@ -8,6 +8,8 @@ Este projeto automatiza dois cenários do blog do Agi usando testes que simulam 
 
 Os testes seguem passos parecidos com o que um usuário faria no navegador: abrir o site, aceitar cookies (se aparecer), usar a busca, abrir artigos e interagir com o formulário de simulação.
 
+A validação final da simulação de empréstimo pessoal é o direcionamento para a API do Whatsapp Web.
+
 Métodos principais usados (nomes técnicos, apenas para referência):
 
 - open
