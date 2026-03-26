@@ -31,7 +31,7 @@ test.describe('Blog do Agi - Pesquisa de artigos', () => {
     await blog.open();
     await blog.acceptCookiesIfPresent();
 
-    // A lupa de pesquisa (canto superior direito) deve existir (pré-condição do fluxo)
+    // A lupa de pesquisa (canto superior direito) deve existir (pré-condição)
     await blog.assertSearchAvailable();
 
     const term = 'simulação do empréstimo pessoal';

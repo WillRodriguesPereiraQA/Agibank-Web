@@ -23,13 +23,11 @@ export class AgibankCasesPage {
     // Header "lupa": no snapshot do site aparece como botão acessível "Search button"
     this.searchButton = page.getByRole('button', { name: /pesquisar|search/i });
 
-    // Campo de busca no WordPress (name="s")
+    // Campo de busca
     this.searchInput = page.locator('input[type="search"], input[name="s"]').first();
 
-    // Resultados costumam vir como cards em <article>
     this.articles = page.locator('main article');
 
-    // Mensagem padrão do tema/WordPress para busca vazia/inexistente
     this.noResultsText = page.locator(
       'text=/lamentamos|nada foi encontrado|nenhum resultado|nada encontrado|não encontramos|nothing found|no results/i'
     );
@@ -76,7 +74,6 @@ export class AgibankCasesPage {
       await this.page.goto(url, { waitUntil: 'commit' });
       await this.page.waitForLoadState('domcontentloaded');
     } catch (err) {
-      // Alguns acessos podem abortar por redirecionamento/rede; tentamos 1 retry.
       await this.page.waitForTimeout(500);
       await this.page.goto(url, { waitUntil: 'commit' });
       await this.page.waitForLoadState('domcontentloaded');
