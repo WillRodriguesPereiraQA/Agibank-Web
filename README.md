@@ -25,9 +25,8 @@ Métodos principais usados (nomes técnicos, apenas para referência):
 - assertLoanLeadFormVisible
 - fillLoanLeadFormWithRandomData
 - submitLoanLeadForm
-
-Obs: Criei uma execução em pipelin pelo Git Actions. 
-Obs 2: Anexei as evidências em prints e um vídeo no projeto.
+ 
+Obs: Anexei as evidências em prints e um vídeo no projeto.
 
 ### Requisitos
 - Node.js
