@@ -3,8 +3,8 @@
 
 Este projeto automatiza dois cenários do blog do Agi usando testes que simulam ações de um usuário comum. Em linguagem simples:
 
-- Teste 1: Procura por um artigo sobre como diminuir a parcela do empréstimo consignado e confirma que o artigo correto aparece e contém textos esperados.
-- Teste 2: Encontra o artigo sobre simulação de empréstimo pessoal, abre o link de simulação, verifica se o formulário aparece, preenche com dados fictícios e envia.
+- Test Case 1: Procura por um artigo sobre como diminuir a parcela do empréstimo consignado e confirma que o artigo correto aparece e contém textos esperados.
+- Test Case 2: Encontra o artigo sobre simulação de empréstimo pessoal, abre o link de simulação, verifica se o formulário aparece, preenche com dados fictícios e envia.
 
 Os testes seguem passos parecidos com o que um usuário faria no navegador: abrir o site, aceitar cookies (se aparecer), usar a busca, abrir artigos e interagir com o formulário de simulação.
 
