@@ -147,7 +147,22 @@ export class AgibankCasesPage {
   }
 
   async submitLoanLeadForm(): Promise<void> {
+    // Dispara o clique e tenta capturar um popup (caso o link abra em nova aba/janela).
+    const popupPromise = this.page.waitForEvent('popup', { timeout: 3000 }).catch(() => undefined);
     await this.loanSubmitButton.click();
+
+    const popup = await popupPromise;
+
+    const whatsappRegex = /(api\.whatsapp\.com|wa\.me|web\.whatsapp\.com)/i;
+
+    if (popup) {
+      await popup.waitForLoadState('domcontentloaded');
+      await expect(popup).toHaveURL(whatsappRegex);
+    } else {
+      // Se não houve popup, validar a URL da própria página atual.
+      await this.page.waitForLoadState('domcontentloaded');
+      await expect(this.page).toHaveURL(whatsappRegex);
+    }
   }
 }
 
